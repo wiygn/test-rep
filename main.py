@@ -1,5 +1,8 @@
 import requests
 
-r = requests.get('http://httpbin.org/get?kek=foo')
+def httpbin_get():
+	return requests.get('http://httpbin.org/get')
 
-print(r.json())
+if __name__ == '__main__':
+	r = httpbin_get()
+	print(r.json())
